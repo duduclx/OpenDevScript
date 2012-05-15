@@ -1,0 +1,57 @@
+PScript By dudu.clx.
+
+Based on great work from PSPdev, PS2dev, ps3dev and all his contributors.
+
+__________________________________________________________________________
+------> ps3devubuntu.sh
+This script is to use on Linux Debian or Ubuntu.
+Just run the script typing in the terminal:
+sh ./ps3devubuntu.sh
+and enter your password.
+
+Will install psl1ght v2 and ps3tools into "/home/$USER/dev/ps3dev".
+will install ps3keys into "/home/$USER/.ps3".
+
+__________________________________________________________________________
+------> ps3devmac.sh
+This script is to use on Mac Osx (10.5 or higher).
+You'll need to perform pre-install:
+.Macports: https://www.macports.org/
+.ActiveTCL 8.5 or higher: http://www.activestate.com/activetcl/downloads
+.nvidia CG 3 (or higher): http://developer.nvidia.com/cg-toolkit
+.Xcode 3.2.6 (and select ppc support): torrent client or anything else.
+If xcode won't install, mount it and type in terminal:
+    export COMMAND_LINE_INSTALL=1
+    open "/Volumes/Xcode and iOS SDK/Xcode and iOS SDK.mpkg"
+
+Just run the script typing in the terminal:
+sh ./ps3devmac.sh
+
+Will install psl1ght V2 and ps3tools into "/users/$USER/dev/ps3dev".
+will install ps3keys into "/users/$USER/.ps3".
+
+__________________________________________________________________________
+------> ps2dev.sh
+This script is to use on Linux Debian or Ubuntu.
+Just run the script typing in the terminal:
+sh ./ps2dev.sh
+and enter your password.
+
+Will install ps2sdk into "/home/$USER/dev/ps2dev".
+Not all ps2sdk-ports will be installed.
+
+__________________________________________________________________________
+------> ps2opl.sh
+This script will compile open-PS2-Loader and tools from ifcaro's sources.
+"opl.elf" will be available in "/home/$USER/dev/ps2dev/open-ps2-loader".
+"iso2opl" and "opl2iso" will be available in "/home/$USER/dev/ps2dev/open-ps2-loader/pc".
+
+__________________________________________________________________________
+------> pspdev.sh
+This script is to use on Linux Debian or Ubuntu.
+Just run the script typing in the terminal:
+sh ./pspdev.sh
+and enter your password.
+
+Will install pspsdk into "/home/$USER/dev/pspdev".
+None of psp-ports will be installed.
