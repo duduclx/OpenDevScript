@@ -56,23 +56,19 @@ cd $BUILDDIR/ps3toolchain
 ./toolchain.sh
 
 # Install ps3tools
+sudo mkdir $BUILDDIR/ps3tools
 cd $BUILDDIR/ps3tools
-./autogen.sh
-./configure --prefix="$PS3DEV/ps3tools"
+sh ./autogen.sh
+sh ./configure --prefix="$PS3DEV/ps3tools"
 make
 sudo make install
 
 # Install ps3keys
-cd /home/$USER
-sudo mkdir .ps3
-sudo cp $BUILDDIR/ps3keys/. /home/$USER/.ps3
+sudo mv $BUILDDIR/ps3keys /home/$USER/.ps3
+
+mkdir ~/ps3dev
+cp -r $BUILDDIR/build/psl1ght/samples $PS3DEV/samples
  
 # Clean
 sudo rm -R $BUILDDIR
 clear
-
-# Setup environnement
-echo 'export PS3DEV=/home/$USER/dev/ps3dev' >> ~/.bashrc
-echo 'export PSL1GHT=$PS3DEV/psl1ght' >> ~/.bashrc
-echo 'export PATH="$PATH:$PS3DEV/bin:$PS3DEV/ppu/bin:$PS3DEV/spu/bin"' >> ~/.bashrc
-. ~/.bashrc
