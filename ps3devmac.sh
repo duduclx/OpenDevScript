@@ -85,9 +85,12 @@ port -v selfupdate
 port upgrade outdated
 port sync
 
+## Get Sources.
+
+git clone git@github.com:duduclx/PS3DEV.git $BUILDDIR
+
 ## Install PS3TOOLS.
-git clone git@github.com:duduclx/ps3tools.git
-cd ps3tools
+cd $BUILDDIR/ps3tools
 ./autogen.sh
 ./configure --prefix="$PS3DEV/ps3tools"
 make
@@ -96,15 +99,10 @@ cd ..
 clear
 
 ## Install TOOLCHAIN-psl1ght-ps3libraries.
-git clone git@github.com:duduclx/ps3toolchain_mac.git
 cd ps3toolchain_mac
 ./toolchain.sh
 cd ..
 clear
-
-## Cleaning build dir
-cd $L
-sudo rm -R build
 
 ## Install Keys.
 ### Exit Sudo.
@@ -113,6 +111,9 @@ exit
 cd ~
 sudo mkdir .ps3
 ### copy key to .ps3 dir
-git clone git@github.com:duduclx/ps3keys.git
-ditto ps3keys ~/.ps3
+ditto $BUILLDIR/ps3keys ~/.ps3
 sudo rm -R ps3keys
+
+## Cleaning build dir
+cd $L
+sudo rm -R $BUILDDIR
