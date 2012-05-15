@@ -51,7 +51,7 @@ cd $PS2DEV
 # Get sources
 export BUILDDIR=$L/build
 sudo mkdir $BUILDDIR
-sudo git clone git://github.com/duduclx/pspdev.git $BUILDDIR
+sudo git clone git://github.com/duduclx/PSPDEV.git $BUILDDIR
 sudo chown -R $USER $BUILDDIR
 
 # Install psptoolchain

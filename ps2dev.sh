@@ -48,7 +48,7 @@ cd $PS2DEV
 # Get sources
 export BUILDDIR=$L/build
 sudo mkdir $BUILDDIR
-sudo git clone git://github.com/duduclx/ps2dev.git $BUILDDIR
+sudo git clone git://github.com/duduclx/PS2DEV.git $BUILDDIR
 sudo chown -R $USER $BUILDDIR
 
 # Install ps2toolchain

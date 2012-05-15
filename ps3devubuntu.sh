@@ -48,7 +48,7 @@ sudo chown -R $USER $PS3DEV
 # Get sources
 export BUILDDIR=$L/build
 sudo mkdir $BUILDDIR
-sudo git clone git://github.com/duduclx/ps3dev.git $BUILDDIR
+sudo git clone git://github.com/duduclx/PS3DEV.git $BUILDDIR
 sudo chown -R $USER $BUILDDIR
 
 # Install psl1ght
