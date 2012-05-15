@@ -23,7 +23,8 @@ sudo apt-get install --force-yes libgmp3-dev
 sudo apt-get install --force-yes libgmp3-devel
 sudo apt-get install --force-yes libmpfr-dev
 sudo apt-get install --force-yes libmpfr-devel
-sudo apt-get install --force-yes mpc
+sudo apt-get install --force-yes libmpc-dev
+sudo apt-get install --force-yes libmpc-devel
 sudo apt-get install --force-yes gmp
 sudo apt-get install --force-yes libelf
 sudo apt-get install --force-yes mpfr
