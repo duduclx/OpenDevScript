@@ -17,6 +17,7 @@ Available sources into "/home/$USER/dev/ps3dev/sources":
 .openps3ftp
 .norsx
 .PSSeismograph
+.PS3Print
 
 __________________________________________________________________________
 ------> ps3devmac.sh
