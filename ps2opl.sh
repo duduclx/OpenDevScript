@@ -30,3 +30,6 @@ clear
 cd $PS2DEV/open-ps2-loader/pc
 make
 clear
+
+echo "open-ps2-loader compiled (opl.elf) into '/home/$USER/dev/ps2dev/open-ps2-loader'" 
+echo "iso2opl, opl2iso compiled into '/home/$USER/dev/ps2dev/open-ps2-loader/pc'"
