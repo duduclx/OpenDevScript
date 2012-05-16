@@ -80,13 +80,18 @@ cd $BUILDDIR/libs/rsxgl
 chmod a+x make_SDL_Libs.sh
 ./make_SDL_Libs.sh
 
+# Install ps3soundlib
+cd $BUILDDIR/libs/ps3soundlib
+make
+
 # Install ps3keys
 sudo mkdir /home/$USER/.ps3
 sudo cp $BUILDDIR/ps3keys/* /home/$USER/.ps3
 
 # Install some sources
 sudo mv $BUILDDIR/psl1ght/samples $PS3DEV/samples
-sudo mv $BUILDDIR/sources/openps3ftp $PS3DEV/openps3ftp
+sudo mkdir $PS3DEV/sources
+sudo mv $BUILDDIR/sources/openps3ftp $PS3DEV/sources/openps3ftp
  
 # Clean
 sudo rm -R $BUILDDIR
