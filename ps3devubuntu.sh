@@ -91,7 +91,7 @@ sudo cp $BUILDDIR/ps3keys/* /home/$USER/.ps3
 # Install some sources
 sudo mv $BUILDDIR/psl1ght/samples $PS3DEV/samples
 sudo mkdir $PS3DEV/sources
-sudo mv $BUILDDIR/sources/openps3ftp $PS3DEV/sources/openps3ftp
+sudo mv $BUILDDIR/sources $PS3DEV/sources
  
 # Clean
 sudo rm -R $BUILDDIR
