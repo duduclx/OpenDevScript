@@ -64,11 +64,19 @@ sh ./configure --prefix="$PS3DEV/ps3tools"
 make
 sudo make install
 
+# Install libopf for OpenPs3Ftp
+cd $BUILDDIR/libopf
+make
+sudo make install
+
 # Install ps3keys
+sudo mkdir /home/$USER/.ps3
 sudo cp $BUILDDIR/ps3keys/* /home/$USER/.ps3
 
 # Install some sources
 sudo mv $BUILDDIR/psl1ght/samples $PS3DEV/samples
+sudo mv $BUILDDIR/ThatOtherDev $PS3DEV/ThatOtherDev
+sudo mv $BUILDDIR/openps3ftp $PS3DEV/openps3ftp
  
 # Clean
 sudo rm -R $BUILDDIR

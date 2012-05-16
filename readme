@@ -11,11 +11,15 @@ and enter your password.
 
 Will install psl1ght v2 and ps3tools into "/home/$USER/dev/ps3dev".
 will install ps3keys into "/home/$USER/.ps3".
+Samples will be available in "/home/$USER/dev/ps3dev/samples".
+ThatOtherDev sources added into "/home/$USER/dev/ps3dev/ThatOtherDev".
+Added Libopf librarie and Openps3ftp source code into "/home/$USER/dev/ps3dev/openps3ftp".
 
 __________________________________________________________________________
 ------> ps3devmac.sh
 This script is to use on Mac Osx (10.5 or higher).
 You'll need to perform pre-install:
+.git: http://code.google.com/p/git-osx-installer/
 .Macports: https://www.macports.org/
 .ActiveTCL 8.5 or higher: http://www.activestate.com/activetcl/downloads
 .nvidia CG 3 (or higher): http://developer.nvidia.com/cg-toolkit
