@@ -65,7 +65,7 @@ make
 sudo make install
 
 # Install libopf for OpenPs3Ftp
-cd $BUILDDIR/libopf
+cd $BUILDDIR/libs/libopf
 make
 sudo make install
 
@@ -75,8 +75,7 @@ sudo cp $BUILDDIR/ps3keys/* /home/$USER/.ps3
 
 # Install some sources
 sudo mv $BUILDDIR/psl1ght/samples $PS3DEV/samples
-sudo mv $BUILDDIR/ThatOtherDev $PS3DEV/ThatOtherDev
-sudo mv $BUILDDIR/openps3ftp $PS3DEV/openps3ftp
+sudo mv $BUILDDIR/sources/openps3ftp $PS3DEV/openps3ftp
  
 # Clean
 sudo rm -R $BUILDDIR
