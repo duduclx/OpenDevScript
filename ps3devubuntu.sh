@@ -69,6 +69,17 @@ cd $BUILDDIR/libs/libopf
 make
 sudo make install
 
+# Install rsxgl
+cd $BUILDDIR/libs/rsxgl
+./configure
+make
+sudo make install
+
+# Install sdl-libs
+cd $BUILDDIR/libs/rsxgl
+chmod a+x make_SDL_Libs.sh
+./make_SDL_Libs.sh
+
 # Install ps3keys
 sudo mkdir /home/$USER/.ps3
 sudo cp $BUILDDIR/ps3keys/* /home/$USER/.ps3
