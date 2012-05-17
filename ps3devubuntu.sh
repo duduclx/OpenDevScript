@@ -36,7 +36,7 @@ sudo chown -R $USER $L
 
 # Path
 export PS3DEV=$L/ps3dev
-export PSL1GHT=$PS3DEV/psl1ght
+export PSL1GHT=$PS3DEV
 export PATH=$PATH:$PS3DEV/bin
 export PATH=$PATH:$PS3DEV/ppu/bin
 export PATH=$PATH:$PS3DEV/spu/bin
@@ -56,11 +56,10 @@ cd $BUILDDIR/ps3toolchain
 ./toolchain.sh
 
 # Install ps3tools
-sudo mkdir $BUILDDIR/ps3tools
 cd $BUILDDIR/ps3tools
 chmod a+x autogen.sh
 sh ./autogen.sh
-sh ./configure --prefix="$PS3DEV/ps3tools"
+sh ./configure --prefix="$PS3DEV"
 make
 sudo make install
 
@@ -76,7 +75,7 @@ make
 sudo make install
 
 # Install sdl-libs
-cd $BUILDDIR/libs/rsxgl
+cd $BUILDDIR/libs/sdl-libs
 chmod a+x make_SDL_Libs.sh
 ./make_SDL_Libs.sh
 
@@ -93,11 +92,14 @@ sudo mkdir /home/$USER/.ps3
 sudo cp $BUILDDIR/ps3keys/* /home/$USER/.ps3
 
 # Install some sources
-sudo mv -r $BUILDDIR/psl1ght/samples $PS3DEV/samples
+mkdir $PS3DEV/samples
+sudo chown -R $USER $PS3DEV/samples
+sudo cp -R $BUILDDIR/psl1ght/samples $PS3DEV
 sudo mkdir $PS3DEV/sources
-sudo mv -r $BUILDDIR/sources $PS3DEV/sources
-sudo mv -r $BUILDDIR/libs/tiny3D/samples $PS3DEV/sources/tiny3DSamples
+sudo chown -R $USER $PS3DEV/sources
+sudo cp -R $BUILDDIR/sources $PS3DEV
  
 # Clean
-sudo rm -R $BUILDDIR
-clear
+# sudo chown -R $USER $PS3DEV
+# sudo rm -R $BUILDDIR
+# clear
