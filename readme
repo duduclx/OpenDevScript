@@ -11,13 +11,14 @@ and enter your password.
 
 Will install psl1ght v2 and ps3tools into "/home/$USER/dev/ps3dev".
 will install ps3keys into "/home/$USER/.ps3".
-Will install libopf, rsxgl,ps3soundlib and sdl_libs.
+Will install libopf, rsxgl,ps3soundlib, tiny3D and sdl_libs.
 Samples will be available in "/home/$USER/dev/ps3dev/samples".
 Available sources into "/home/$USER/dev/ps3dev/sources":
 .openps3ftp
 .norsx
 .PSSeismograph
 .PS3Print
+.tiny3d samples
 
 __________________________________________________________________________
 ------> ps3devmac.sh
