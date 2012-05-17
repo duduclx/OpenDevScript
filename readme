@@ -15,6 +15,7 @@ Will install libopf, rsxgl,ps3soundlib, tiny3D and sdl_libs.
 Samples will be available in "/home/$USER/dev/ps3dev/samples".
 Available sources into "/home/$USER/dev/ps3dev/sources":
 .openps3ftp
+.openosk
 .norsx
 .PSSeismograph
 .PS3Print
