@@ -84,14 +84,19 @@ chmod a+x make_SDL_Libs.sh
 cd $BUILDDIR/libs/ps3soundlib
 make
 
+# Install tiny3D
+cd $BUILDDIR/libs/tiny3D
+make
+
 # Install ps3keys
 sudo mkdir /home/$USER/.ps3
 sudo cp $BUILDDIR/ps3keys/* /home/$USER/.ps3
 
 # Install some sources
-sudo mv $BUILDDIR/psl1ght/samples $PS3DEV/samples
+sudo mv -r $BUILDDIR/psl1ght/samples $PS3DEV/samples
 sudo mkdir $PS3DEV/sources
-sudo mv $BUILDDIR/sources $PS3DEV/sources
+sudo mv -r $BUILDDIR/sources $PS3DEV/sources
+sudo mv -r $BUILDDIR/libs/tiny3D/samples $PS3DEV/sources/tiny3DSamples
  
 # Clean
 sudo rm -R $BUILDDIR
