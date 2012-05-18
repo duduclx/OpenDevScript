@@ -84,22 +84,34 @@ cd $BUILDDIR/libs/ps3soundlib
 make
 
 # Install tiny3D
-cd $BUILDDIR/libs/tiny3D
+cd $BUILDDIR/libs/tiny3d
 make
 
 # Install ps3keys
 sudo mkdir /home/$USER/.ps3
 sudo cp $BUILDDIR/ps3keys/* /home/$USER/.ps3
 
-# Install some sources
+# Install some samples
 mkdir $PS3DEV/samples
 sudo chown -R $USER $PS3DEV/samples
 sudo cp -R $BUILDDIR/psl1ght/samples $PS3DEV
+
+# Install some sources
 sudo mkdir $PS3DEV/sources
 sudo chown -R $USER $PS3DEV/sources
 sudo cp -R $BUILDDIR/sources $PS3DEV
  
 # Clean
-# sudo chown -R $USER $PS3DEV
-# sudo rm -R $BUILDDIR
-# clear
+sudo chown -R $USER $PS3DEV
+sudo rm -R $BUILDDIR
+clear
+
+# End
+echo "ps3dev, psl1ght v2 installed with success."
+echo "make sure to setup environnement before compiling."
+echo "export PS3DEV=/home/$USER/dev/ps3dev
+export PSL1GHT=$PS3DEV
+export PATH=$PATH:$PS3DEV/bin
+export PATH=$PATH:$PS3DEV/ppu/bin
+export PATH=$PATH:$PS3DEV/spu/bin"
+echo "all credits to all developers".
