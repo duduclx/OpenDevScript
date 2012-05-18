@@ -59,48 +59,42 @@ clear
 #compilation de ps2eth
 cd $BUILDDIR/ps2eth
 make
-clear
+# clear
+sleep 5
 
 #compilation de gskit
 cd $BUILDDIR/gsKit
 make
-clear
+# clear
+sleep 5
 
 #compilation de zlib
 cd ..
 cp -R ps2sdk-ports/zlib ./
 cd zlib
 make && make install  
-clear
+# clear
+sleep 5
 
 #compilation de libpng
 cd $BUILDDIR/ps2sdk-ports/libpng
 make && make install
-clear
+# clear
+sleep 5
 
 #compilation de libjpeg
 cd $BUILDDIR/ps2sdk-ports/libjpeg
 make && make install
-clear
+# clear
+sleep 5
 
 #compilation de ps2-packer
 cd $BUILDDIR/ps2-packer
 make
 make install
-clear
+# clear
+sleep 5
 
 # Clean
-sudo rm -R $BUILDDIR
-clear
-
-# Setup environnement
-echo 'export PS2DEV=$L/ps2dev' >> ~/.bashrc
-echo 'export PATH=$PATH:$PS2DEV/bin' >> ~/.bashrc
-echo 'export PATH=$PATH:$PS2DEV/ee/bin' >> ~/.bashrc
-echo 'export PATH=$PATH:$PS2DEV/iop/bin' >> ~/.bashrc
-echo 'export PATH=$PATH:$PS2DEV/dvp/bin' >> ~/.bashrc
-echo 'export PS2SDK=$PS2DEV/ps2sdk' >> ~/.bashrc
-echo 'export PATH=$PATH:$PS2SDK/bin' >> ~/.bashrc
-echo 'export PS2ETH=$PS2DEV/ps2eth' >> ~/.bashrc
-echo 'export GSKIT=$PS2DEV/gsKit' >> ~/.bashrc
-. ~/.bashrc
+#sudo rm -R $BUILDDIR
+#clear
