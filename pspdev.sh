@@ -74,11 +74,5 @@ clear
 # clear
 
 # Clean
-sudo rm -R $BUILDDIR
-clear
-
-# Setup environnement
-echo 'export PSPDEV=$L/pspdev' >> ~/.bashrc
-echo 'export PSPSDK=$PSPDEV/psp/sdk' >> ~/.bashrc
-echo 'export PATH=$PATH:$PSPDEV/bin:$PSPSDK/bin' >> ~/.bashrc
-. ~/.bashrc
+# sudo rm -R $BUILDDIR
+# clear
