@@ -20,6 +20,7 @@ Available sources into "/home/$USER/dev/ps3dev/sources":
 .PSSeismograph
 .PS3Print
 .tiny3d samples
+.rsxgl samples
 
 __________________________________________________________________________
 ------> ps3devmac.sh
