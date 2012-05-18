@@ -25,9 +25,9 @@ sudo apt-get install --force-yes libmpfr-dev
 sudo apt-get install --force-yes libmpfr-devel
 sudo apt-get install --force-yes libmpc-dev
 sudo apt-get install --force-yes libmpc-devel
-sudo apt-get install --force-yes gmp
-sudo apt-get install --force-yes libelf
-sudo apt-get install --force-yes mpfr
+sudo apt-get install --force-yes libelf-dev
+sudo apt-get install --force-yes libelf-devel
+sudo apt-get install --force-yes subversion
 sudo apt-get install --force-yes git
 sudo apt-get install --force-yes g++
 sudo apt-get install --force-yes gcc
@@ -47,7 +47,7 @@ export PATH=$PATH:$PSPDEV/bin:$PSPSDK/bin
 # Go to Directory
 sudo mkdir $PSPDEV
 sudo chown -R $USER $PSPDEV
-cd $PS2DEV
+cd $PSPDEV
 
 # Get sources
 export BUILDDIR=$L/build
@@ -58,21 +58,24 @@ sudo chown -R $USER $BUILDDIR
 # Install psptoolchain
 cd $BUILDDIR/psptoolchain
 ./toolchain.sh
-clear
 
 # Install prxtool
 cd $BUILDDIR/prxtool
 ./bootstrap
-./configure
+./configure prefix="$PSPDEV"
 make
 sudo make install
-clear
+sudo make install all
 
 # Install psp-ports
 # cd $BUILDDIR/psp-ports
 # buildallports.sh
 # clear
 
+# Move Samples
+mv $PSPDEV/psp/sdk/samples $PSPDEV
+
 # Clean
-# sudo rm -R $BUILDDIR
-# clear
+sudo chown -R $USER $PSPDEV
+sudo rm -R $BUILDDIR
+clear
