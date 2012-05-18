@@ -3,7 +3,7 @@ OpenDevScript By dudu.clx.
 Based on great work from PSPdev, PS2dev, ps3dev and all his contributors.
 
 __________________________________________________________________________
-------> ps3devubuntu.sh
+------> ps3dev.sh
 This script is to use on Linux Debian or Ubuntu.
 Just run the script typing in the terminal:
 sh ./ps3devubuntu.sh
